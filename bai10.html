@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="soDien">
+    <input type="button" onclick="tinhToan()" value="Tinh">
+    <div>
+        Bậc thang 1	1678	50	<br>
+        Bậc thang 2	1734	50	<br>
+        Bậc thang 3	2014	100	<br>
+        Bậc thang 4	2536	100	<br>
+        Bậc thang 5	2834	100	<br>
+        Bậc thang 6	2927	0	
+    </div>
+</body>
+<script>
+    
+    function tinhToan(){
+        let soDien = document.getElementById('soDien').value;
+        soDien = parseInt(soDien);
+        let result = 0;
+        // if(soDien <= 50){
+        //     result = soDien * 1678;
+        //     console.log(result);
+        // }else if(soDien <= 100){
+        //     let soDien50 = soDien - 50; 
+        //     result = 50*1678 + soDien*1734; 
+        //     console.log(result);
+        // }else if(soDien <= 200){
+        //     let soDien1 = soDien - 100;
+        //     result = 50*1678 + 50*1734 + soDien1*2014;
+        //     console.log(result);
+        // }else if(soDien <= 300){
+        //     let soDien1 = soDien - 200;
+        //     result = 50*1678 + 50*1734 + 100*2014 + soDien1*2536;
+        //     console.log(result);
+        // }else if(soDien <= 400){
+        //     let soDien1 = soDien - 300;
+        //     result = 50*1678 + 50*1734 + 100*2014 + 100*2536 + soDien1*2834;
+        //     console.log(result);
+        // }else{
+        //     let soDien1 = soDien - 400;
+        //     result = 50*1678 + 50*1734 + 100*2014 + 100*2536 + 100*2834 + soDien*2927;
+        //     console.log(result);
+        // }
+        if(soDien <= 50){
+            result = soDien * 1678;
+        }else if(soDien <= 100){
+            result = soDien*1734; 
+        }else if(soDien <= 200){
+            result = soDien1*2014;
+        }else if(soDien <= 300){
+            result = soDien1*2536;
+        }else if(soDien <= 400){
+            result = soDien1*2834;
+        }else{
+            result = soDien*2927;
+        }
+        
+        console.log(result);
+        // document.write(`${result}`);
+
+    }
+</script>
+</html>

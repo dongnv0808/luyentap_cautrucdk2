@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 
+Đến 5 triệu đồng (trđ) 5% TNTT
+Trên 5 trđ đến 10 trđ  10% TNTT - 0,25 trđ
+Trên 10 trđ đến 18 trđ 15% TNTT - 0,75 trđ
+Trên 18 trđ đến 32 trđ 20% TNTT - 1,65 trđ
+Trên 32 trđ đến 52 trđ 25% TNTT - 3,25 trđ
+Trên 52 trđ đến 80 trđ 30 % TNTT - 5,85 trđ
+Trên 80 trđ 35% TNTT - 9,85 trđ 
+-->
+<body>
+    <h1>Tinh thu nhap tinh thue phai nop</h1>
+    <input type="number" id="thuNhapTinhThue">trieu <br>
+    <input type="button" onclick="tinhToan()" value="Tinh">
+    <div id="result"></div>
+</body>
+<script>
+    function tinhToan(){
+        let thuNhap = document.getElementById('thuNhapTinhThue').value;
+        thuNhap = parseInt(thuNhap);
+        let result = 0;
+        console.log(thuNhap);
+        console.log(result);
+        if(thuNhap <= 5){
+            result = thuNhap * 5 / 100;
+        }else if(thuNhap <= 10){
+            result = thuNhap * 10 / 100 - 0.25;
+        }else if(thuNhap <= 18){
+            result = thuNhap * 15 / 100 - 0.75;
+        }else if(thuNhap <= 32){
+            result = thuNhap * 20 / 100 - 1.65;
+        }else if(thuNhap <= 52){
+            result = thuNhap * 25 / 100 - 3.25;
+        }else if(thuNhap <= 80){
+            result = thuNhap * 30 / 100 - 5.85;
+        }else{
+            result = thuNhap * 35 / 100 - 9.85;
+        }
+        alert(`So thue phai nop la ${result}trieu`);
+    }
+</script>
+</html>
